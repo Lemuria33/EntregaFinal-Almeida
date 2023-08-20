@@ -1,3 +1,7 @@
 .App {
-  color:black;
+  text-align: center;
+}
+
+.app h1 {
+  color: tomato;
 }

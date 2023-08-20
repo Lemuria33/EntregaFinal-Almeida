@@ -14,7 +14,7 @@ return (
         <Card.Text>
         ${prod.price}
         </Card.Text>
-        <Button as={Link} to={`/item/${prod.id}`} variant="primary">Detalles</Button>
+        <Button as={Link} to={`/item/${prod.id}`} variant="danger">Detalles</Button>
     </Card.Body>
     </Card>
 )

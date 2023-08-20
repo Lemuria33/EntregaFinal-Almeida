@@ -1,6 +1,7 @@
 import useGetCollectionByCategory from './Hooks/useGetCollectionById';
 import ItemList from './ItemList/itemList';
 import { useParams } from 'react-router-dom';
+import "./css/itemListContainer.css";
 
 const ItemListContainer = ({greeting})=>{
     const {categoryId}= useParams()
@@ -11,7 +12,7 @@ const ItemListContainer = ({greeting})=>{
             {
                 !collectionData ? <p>Cargando...</p>
                 : <div>
-                <h1>{greeting} <span>{categoryId && categoryId}</span></h1>
+                <h1 className='greeting'>{greeting} <span>{categoryId && categoryId}</span></h1>
                 <ItemList productos={collectionData}/>
             </div>
             }  

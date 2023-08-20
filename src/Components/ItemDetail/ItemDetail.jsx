@@ -25,9 +25,9 @@ const ItemDetail = ({ producto }) => {
             <div className='agregarProductos'>
                 {
                     productosAgregados > 0 ?
-                        <div className="mb-3">
+                        <div className="mb-3 ">
                             <Button as={Link} to='/' variant="outline-warning">Seguir comprando</Button>
-                            <Button as={Link} to='/cart' variant="outline-info">Finalizar compra</Button>
+                            <Button as={Link} to='/cart' variant="outline-info ms-4">Finalizar compra</Button>
                         </div> :
                         <ItemCount initial={1} stock={producto.stock} onAdd={onAdd} />
                 }

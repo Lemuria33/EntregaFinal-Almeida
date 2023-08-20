@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import useCart from "../../Context/UseCart";
 import { addDoc, getFirestore, collection } from "firebase/firestore";
+import "../css/cartItems.css"
 
 function CartItems() {
     const { cart, removeItem, clear, totalPrice } = useCart();
@@ -42,11 +43,11 @@ function CartItems() {
 
     return (
         <div className="cart-container">
-            <h3>Carrito de Compras</h3>
+            <h3 className="carritoDeCompras">Carrito de Compras</h3>
             {cart.length === 0 ? (
                 <div className="cart-empty">
                     <p>Tu carrito está Vacío.</p>
-                    <Button as={Link} to="/" variant="dark">
+                    <Button as={Link} to="/" variant="danger">
                         Ver Productos
                     </Button>
                 </div>
@@ -70,7 +71,7 @@ function CartItems() {
                                     <td>${item.price}</td>
                                     <td>${item.price * item.quantity}</td>
                                     <td>
-                                        <Button variant="dark" onClick={() => removeItem(item.id)}>
+                                        <Button variant="outline-danger" onClick={() => removeItem(item.id)}>
                                             Eliminar
                                         </Button>
                                     </td>
@@ -80,13 +81,13 @@ function CartItems() {
                     </table>
                     <div className="cart-summary">
                         <p>Precio Total: ${totalPrice()}</p>
-                        <Button variant="dark" onClick={clear}>
+                        <Button variant="danger" onClick={clear}>
                             Vaciar Carrito
                         </Button>
-                        <Button as={Link} to="/" variant="dark">
+                        <Button as={Link} to="/" variant="danger ms-2">
                             Seguir Comprando
                         </Button>
-                        <Button as={Link} to={`/cart/checkout/${orderId}`} variant="outline-dark" onClick={handleOrder}>
+                        <Button as={Link} to={`/cart/checkout/${orderId}`} variant="outline-success ms-2" onClick={handleOrder}>
                             Terminar mi Compra
                         </Button>
                     </div>

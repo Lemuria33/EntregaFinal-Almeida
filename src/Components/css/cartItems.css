@@ -1,0 +1,57 @@
+.carritoDeCompras {
+  color: crimson;
+  padding: 10px 0px 10px 0px;
+}
+
+.cart-table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.cart-table th,
+.cart-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.cart-table th {
+  background-color: #f2f2f2;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  margin: 10px;
+}
+
+.item-details p {
+  margin-right: 10px;
+}
+
+.cart-summary {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+  align-items: center;
+}
+
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
